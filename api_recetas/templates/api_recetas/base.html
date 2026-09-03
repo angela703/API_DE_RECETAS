@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}API de Recetas{% endblock %}</title>
+
+    <style>
+        :root {
+            --verde: #19302d;
+            --naranjo: #d94b2a;
+            --crema: #fffaf4;
+            --linea: #eadfd2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: var(--crema);
+            color: var(--verde);
+        }
+
+        .site-shell {
+            max-width: 1350px;
+            margin: auto;
+            padding: 0 55px;
+        }
+
+        .site-nav {
+            height: 105px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--linea);
+        }
+
+        .brand {
+            color: var(--verde);
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            padding: 13px 25px;
+            border: 1px solid var(--linea);
+            border-radius: 30px;
+            color: var(--naranjo);
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--naranjo);
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            .site-shell {
+                padding: 0 20px;
+            }
+
+            .brand {
+                font-size: 21px;
+            }
+
+            .nav-link {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="site-shell">
+
+        <nav class="site-nav">
+
+            <a class="brand" href="{% url 'home' %}">
+                API de Recetas
+            </a>
+
+            <a class="nav-link" href="/admin/">
+                Administrador
+            </a>
+
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>

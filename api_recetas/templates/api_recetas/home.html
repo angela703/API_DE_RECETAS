@@ -1,0 +1,438 @@
+{% extends 'api_recetas/base.html' %}
+
+{% block title %}API de Recetas{% endblock %}
+
+{% block content %}
+
+<style>
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: calc(100vh - 105px);
+
+        display: grid;
+        grid-template-columns: 48% 52%;
+        align-items: center;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       TEXTO
+    ========================= */
+
+    .hero-content {
+        padding: 70px 20px 80px 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .eyebrow {
+        margin: 0 0 25px;
+
+        color: #d94b2a;
+
+        font-size: 15px;
+        font-weight: bold;
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .eyebrow::after {
+        content: "";
+
+        display: block;
+
+        width: 55px;
+        height: 4px;
+
+        margin-top: 16px;
+
+        background: #d94b2a;
+
+        border-radius: 10px;
+    }
+
+    .hero h1 {
+        margin: 0;
+
+        max-width: 650px;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: clamp(55px, 6vw, 82px);
+
+        line-height: 0.97;
+
+        letter-spacing: -4px;
+
+        color: #19302d;
+    }
+
+    .hero h1 span {
+        color: #d94b2a;
+    }
+
+    .hero-description {
+        max-width: 520px;
+
+        margin: 35px 0 30px;
+
+        color: #687572;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       BOTÓN
+    ========================= */
+
+    .action-link {
+        display: inline-flex;
+        align-items: center;
+
+        padding: 17px 30px;
+
+        border-radius: 8px;
+
+        background: #d94b2a;
+        color: white;
+
+        font-size: 16px;
+        font-weight: bold;
+
+        text-decoration: none;
+
+        box-shadow: 0 10px 25px rgba(217, 75, 42, 0.25);
+
+        transition: 0.25s;
+    }
+
+    .action-link::after {
+        content: "→";
+
+        margin-left: 18px;
+
+        font-size: 22px;
+    }
+
+    .action-link:hover {
+        background: #b93d22;
+        transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       CARACTERÍSTICAS
+    ========================= */
+
+    .features {
+        display: flex;
+
+        margin-top: 48px;
+    }
+
+    .feature {
+        width: 135px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 0 15px;
+    }
+
+    .feature + .feature {
+        border-left: 1px solid #eadfd2;
+    }
+
+    .feature-icon {
+        width: 58px;
+        height: 58px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 10px;
+
+        border-radius: 50%;
+
+        background: #f8e9dc;
+
+        color: #d94b2a;
+
+        font-size: 28px;
+
+        font-family: Georgia, serif;
+    }
+
+    .feature strong {
+        font-size: 15px;
+        color: #263c38;
+    }
+
+    .feature small {
+        margin-top: 3px;
+
+        color: #687572;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       IMAGEN
+    ========================= */
+
+    .hero-image {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .food-image {
+        width: 620px;
+        height: 620px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+
+        position: relative;
+        z-index: 2;
+
+        box-shadow:
+            0 30px 70px rgba(60, 45, 30, 0.20);
+
+        transform: rotate(2deg);
+    }
+
+
+    /* DECORACIONES */
+
+    .hero-image::before {
+        content: "";
+
+        position: absolute;
+
+        width: 430px;
+        height: 430px;
+
+        right: -170px;
+        bottom: -150px;
+
+        border-radius: 50%;
+
+        background: #f5dfbf;
+    }
+
+    .hero-image::after {
+        content: "";
+
+        position: absolute;
+
+        width: 180px;
+        height: 180px;
+
+        left: -90px;
+        bottom: 10px;
+
+        border-radius: 50%;
+
+        background: #c9d7b6;
+    }
+
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+
+        .hero {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .eyebrow::after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features {
+            justify-content: center;
+        }
+
+        .hero-image {
+            min-height: 500px;
+        }
+
+        .food-image {
+            width: 450px;
+            height: 450px;
+        }
+    }
+
+
+    @media (max-width: 550px) {
+
+        .hero h1 {
+            font-size: 48px;
+            letter-spacing: -2px;
+        }
+
+        .hero-description {
+            font-size: 16px;
+        }
+
+        .features {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            width: 100px;
+        }
+
+        .feature + .feature {
+            border-left: none;
+        }
+
+        .food-image {
+            width: 320px;
+            height: 320px;
+        }
+
+        .hero-image {
+            min-height: 380px;
+        }
+    }
+
+</style>
+
+
+<main class="hero">
+
+    <!-- TEXTO -->
+
+    <section class="hero-content">
+
+        <p class="eyebrow">
+            API DE RECETAS
+        </p>
+
+        <h1>
+            Ideas deliciosas,<br>
+            listas para<br>
+            <span>descubrir.</span>
+        </h1>
+
+        <p class="hero-description">
+            Explora una colección de recetas y encuentra
+            inspiración para tu próxima comida.
+        </p>
+
+        <a class="action-link" href="/admin/">
+            Ir al administrador
+        </a>
+
+
+        <!-- CARACTERÍSTICAS -->
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ♧
+                </div>
+
+                <strong>
+                    Recetas
+                </strong>
+
+                <small>
+                    variadas
+                </small>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ☆
+                </div>
+
+                <strong>
+                    Inspiración
+                </strong>
+
+                <small>
+                    diaria
+                </small>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ◡
+                </div>
+
+                <strong>
+                    Listas para
+                </strong>
+
+                <small>
+                    cocinar
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--IMAGEN-->
+
+    <section class="hero-image">
+
+        <img
+            class="food-image"
+            src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=85"
+            alt="Pasta preparada">
+
+    </section>
+
+</main>
+
+{% endblock %}

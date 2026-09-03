@@ -1,0 +1,88 @@
+{% extends 'api_recetas/base.html' %}
+
+{% block title %}404 | Página no encontrada{% endblock %}
+
+{% block content %}
+
+<style>
+
+    .error-page {
+        min-height: calc(100vh - 105px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        position: relative;
+    }
+
+    .error-code {
+        margin: 0;
+
+        color: #d94b2a;
+
+        font-family: Arial, sans-serif;
+
+        font-size: clamp(100px, 18vw, 190px);
+
+        font-weight: 800;
+
+        line-height: 0.8;
+
+        letter-spacing: -8px;
+    }
+
+    .error-page h1 {
+        margin: 35px 0 15px;
+
+        color: #19302d;
+
+        font-family: Georgia, serif;
+
+        font-size: clamp(32px, 5vw, 55px);
+    }
+
+    .error-page p {
+        max-width: 500px;
+
+        margin: 0 0 30px;
+
+        color: #687572;
+
+        font-size: 17px;
+
+        line-height: 1.6;
+    }
+
+    .error-page .action-link {
+        display: inline-flex;
+    }
+
+</style>
+
+
+<main class="error-page">
+
+    <div class="error-code">
+        404
+    </div>
+
+    <h1>
+        Esta página no existe.
+    </h1>
+
+    <p>
+        No encontramos la receta o la dirección que buscas.
+        Comprueba la URL o vuelve al inicio para seguir explorando.
+    </p>
+
+    <a class="action-link" href="{% url 'home' %}">
+        Volver al inicio
+    </a>
+
+</main>
+
+{% endblock %}
