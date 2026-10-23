@@ -1,0 +1,35 @@
+[
+    {
+        "model": "api_recetas.historialreceta",
+        "pk": 1,
+        "fields": {
+            "receta": 1,
+            "usuario": 1,
+            "accion": "Creación",
+            "descripcion": "Se creó la receta de arroz con verduras.",
+            "fecha": "2026-10-08T12:00:00"
+        }
+    },
+    {
+        "model": "api_recetas.historialreceta",
+        "pk": 2,
+        "fields": {
+            "receta": 1,
+            "usuario": 1,
+            "accion": "Publicación",
+            "descripcion": "La receta se publicó para que esté disponible.",
+            "fecha": "2026-10-08T12:30:00"
+        }
+    },
+    {
+        "model": "api_recetas.historialreceta",
+        "pk": 3,
+        "fields": {
+            "receta": 3,
+            "usuario": 1,
+            "accion": "Creación",
+            "descripcion": "Se creó un borrador de sopa de tomate.",
+            "fecha": "2026-10-08T13:00:00"
+        }
+    }
+]

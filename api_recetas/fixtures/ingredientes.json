@@ -1,0 +1,72 @@
+[
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 1,
+        "fields": {
+            "nombre": "Tomate"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 2,
+        "fields": {
+            "nombre": "Cebolla"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 3,
+        "fields": {
+            "nombre": "Ajo"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 4,
+        "fields": {
+            "nombre": "Papa"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 5,
+        "fields": {
+            "nombre": "Zanahoria"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 6,
+        "fields": {
+            "nombre": "Arroz"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 7,
+        "fields": {
+            "nombre": "Harina"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 8,
+        "fields": {
+            "nombre": "Huevo"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 9,
+        "fields": {
+            "nombre": "Leche"
+        }
+    },
+    {
+        "model": "api_recetas.ingrediente",
+        "pk": 10,
+        "fields": {
+            "nombre": "Queso"
+        }
+    }
+]

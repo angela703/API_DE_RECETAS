@@ -1,18 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{% block title %}API de Recetas{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --verde: #19302d;
-            --naranjo: #d94b2a;
-            --crema: #fffaf4;
-            --linea: #eadfd2;
+            --verde: #355e3b;
+            --naranjo: #e58b45;
+            --crema: #fff8ed;
+            --linea: #e8dfd2;
         }
 
         * {
@@ -21,87 +21,115 @@
 
         body {
             margin: 0;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
+            font-family: 'DM Sans', sans-serif;
             background: var(--crema);
-            color: var(--verde);
-        }
+            color: #333;
+    }
 
         .site-shell {
-            max-width: 1350px;
-            margin: auto;
-            padding: 0 55px;
+            min-height: 100vh;
         }
 
         .site-nav {
-            height: 105px;
+            min-height: 105px;
+            padding: 20px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            background: white;
             border-bottom: 1px solid var(--linea);
         }
 
         .brand {
             color: var(--verde);
-            font-family: Georgia, serif;
-            font-size: 28px;
+            font-size: 25px;
             font-weight: bold;
             text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .nav-link {
-            padding: 13px 25px;
-            border: 1px solid var(--linea);
-            border-radius: 30px;
-            color: var(--naranjo);
-            font-weight: bold;
+            color: var(--verde);
             text-decoration: none;
-            transition: 0.2s;
+            font-weight: bold;
         }
 
         .nav-link:hover {
-            background: var(--naranjo);
-            color: white;
+            color: var(--naranjo);
         }
 
-        @media (max-width: 700px) {
-            .site-shell {
-                padding: 0 20px;
+        main {
+            width: 90%;
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 35px 0;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid var(--linea);
+        }
+
+        @media (max-width: 600px) {
+            .site-nav {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .brand {
-                font-size: 21px;
+            .nav-links {
+                gap: 12px;
             }
 
-            .nav-link {
-                padding: 10px 15px;
-                font-size: 13px;
+            main {
+                width: 92%;
+                padding: 25px 0;
             }
         }
     </style>
 </head>
 
 <body>
-
     <div class="site-shell">
+        <header>
+            <nav class="site-nav">
+                <a href="{% url 'home' %}" class="brand">
+                    API de Recetas
+                </a>
 
-        <nav class="site-nav">
+                <div class="nav-links">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        Inicio
+                    </a>
 
-            <a class="brand" href="{% url 'home' %}">
-                API de Recetas
-            </a>
+                    <a href="/api_recetas/" class="nav-link">
+                        API
+                    </a>
 
-            <a class="nav-link" href="/admin/">
-                Administrador
-            </a>
+                    <a href="/admin/" class="nav-link">
+                        Administración
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-        </nav>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
 
-        {% block content %}
-        {% endblock %}
-
+        <footer>
+            <p>API de Recetas</p>
+        </footer>
     </div>
-
 </body>
-
 </html>

@@ -1,0 +1,34 @@
+[
+    {
+        "model": "api_recetas.categoria",
+        "pk": 1,
+        "fields": {
+            "nombre": "Desayunos",
+            "descripcion": "Preparaciones para comenzar el día."
+        }
+    },
+    {
+        "model": "api_recetas.categoria",
+        "pk": 2,
+        "fields": {
+            "nombre": "Almuerzos",
+            "descripcion": "Platos principales y comidas de mediodía."
+        }
+    },
+    {
+        "model": "api_recetas.categoria",
+        "pk": 3,
+        "fields": {
+            "nombre": "Sopas",
+            "descripcion": "Sopas y preparaciones calientes."
+        }
+    },
+    {
+        "model": "api_recetas.categoria",
+        "pk": 4,
+        "fields": {
+            "nombre": "Postres",
+            "descripcion": "Preparaciones dulces para compartir."
+        }
+    }
+]

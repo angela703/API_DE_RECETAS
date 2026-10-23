@@ -1,0 +1,122 @@
+[
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 1,
+        "fields": {
+            "receta": 1,
+            "ingrediente": 6,
+            "cantidad": "2.00",
+            "unidad": "tazas"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 2,
+        "fields": {
+            "receta": 1,
+            "ingrediente": 5,
+            "cantidad": "1.00",
+            "unidad": "unidad"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 3,
+        "fields": {
+            "receta": 1,
+            "ingrediente": 2,
+            "cantidad": "0.50",
+            "unidad": "unidad"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 4,
+        "fields": {
+            "receta": 2,
+            "ingrediente": 4,
+            "cantidad": "4.00",
+            "unidad": "unidades"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 5,
+        "fields": {
+            "receta": 2,
+            "ingrediente": 8,
+            "cantidad": "4.00",
+            "unidad": "unidades"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 6,
+        "fields": {
+            "receta": 2,
+            "ingrediente": 2,
+            "cantidad": "1.00",
+            "unidad": "unidad"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 7,
+        "fields": {
+            "receta": 3,
+            "ingrediente": 1,
+            "cantidad": "6.00",
+            "unidad": "unidades"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 8,
+        "fields": {
+            "receta": 3,
+            "ingrediente": 2,
+            "cantidad": "1.00",
+            "unidad": "unidad"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 9,
+        "fields": {
+            "receta": 3,
+            "ingrediente": 3,
+            "cantidad": "2.00",
+            "unidad": "dientes"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 10,
+        "fields": {
+            "receta": 4,
+            "ingrediente": 7,
+            "cantidad": "2.00",
+            "unidad": "tazas"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 11,
+        "fields": {
+            "receta": 4,
+            "ingrediente": 8,
+            "cantidad": "1.00",
+            "unidad": "unidad"
+        }
+    },
+    {
+        "model": "api_recetas.recetaingrediente",
+        "pk": 12,
+        "fields": {
+            "receta": 4,
+            "ingrediente": 9,
+            "cantidad": "1.50",
+            "unidad": "tazas"
+        }
+    }
+]

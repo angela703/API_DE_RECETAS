@@ -1,0 +1,66 @@
+[
+    {
+        "model": "api_recetas.receta",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arroz con verduras",
+            "descripcion": "Arroz sencillo con verduras salteadas.",
+            "instrucciones": "Cocina el arroz. Sofríe la cebolla y la zanahoria picadas, incorpora el arroz cocido y mezcla. Ajusta la sal antes de servir.",
+            "tiempo_preparacion": 35,
+            "porciones": 4,
+            "estado": "PUBLICADA",
+            "categoria": 2,
+            "creador": 1,
+            "fecha_creacion": "2026-10-08T12:00:00",
+            "fecha_actualizacion": "2026-10-08T12:00:00"
+        }
+    },
+    {
+        "model": "api_recetas.receta",
+        "pk": 2,
+        "fields": {
+            "nombre": "Tortilla de papa",
+            "descripcion": "Tortilla casera de papa, huevo y cebolla.",
+            "instrucciones": "Hierve las papas hasta que estén tiernas y córtalas. Sofríe la cebolla, mezcla con los huevos batidos y las papas, y cocina en una sartén hasta que cuaje por ambos lados.",
+            "tiempo_preparacion": 45,
+            "porciones": 4,
+            "estado": "PUBLICADA",
+            "categoria": 1,
+            "creador": 1,
+            "fecha_creacion": "2026-10-08T12:00:00",
+            "fecha_actualizacion": "2026-10-08T12:00:00"
+        }
+    },
+    {
+        "model": "api_recetas.receta",
+        "pk": 3,
+        "fields": {
+            "nombre": "Sopa de tomate",
+            "descripcion": "Sopa caliente de tomate con cebolla y ajo.",
+            "instrucciones": "Sofríe la cebolla y el ajo picados. Agrega los tomates y agua, cocina hasta que estén blandos y procesa hasta obtener una sopa homogénea.",
+            "tiempo_preparacion": 30,
+            "porciones": 4,
+            "estado": "BORRADOR",
+            "categoria": 3,
+            "creador": 1,
+            "fecha_creacion": "2026-10-08T12:00:00",
+            "fecha_actualizacion": "2026-10-08T12:00:00"
+        }
+    },
+    {
+        "model": "api_recetas.receta",
+        "pk": 4,
+        "fields": {
+            "nombre": "Panqueques",
+            "descripcion": "Panqueques suaves preparados con leche, huevo y harina.",
+            "instrucciones": "Bate la harina, el huevo y la leche hasta integrar. Vierte porciones de la mezcla en una sartén caliente y cocina ambos lados hasta dorar.",
+            "tiempo_preparacion": 20,
+            "porciones": 6,
+            "estado": "PUBLICADA",
+            "categoria": 4,
+            "creador": 1,
+            "fecha_creacion": "2026-10-08T12:00:00",
+            "fecha_actualizacion": "2026-10-08T12:00:00"
+        }
+    }
+]
