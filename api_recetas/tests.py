@@ -164,3 +164,11 @@ class APIRecetasCRUDTests(APITestCase):
                 response = self.client.get(f'/api_recetas/{recurso}/', format='json')
                 self.assertEqual(response.status_code, status.HTTP_200_OK)
                 self.assertEqual(response['Content-Type'], 'application/json')
+
+    def test_lista_categorias_muestra_tabla(self):
+        response = self.client.get('/categorias/')
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertContains(response, 'table table-striped table-hover')
+        self.assertContains(response, 'Categoria de prueba')
+        self.assertContains(response, 'Descripcion inicial')

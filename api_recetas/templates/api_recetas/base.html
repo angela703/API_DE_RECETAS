@@ -1,103 +1,24 @@
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}API de Recetas{% endblock %}</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --verde: #355e3b;
-            --naranjo: #e58b45;
-            --crema: #fff8ed;
-            --linea: #e8dfd2;
-        }
+    <title>{% block title %} API de recetas |{% endblock %}</title>
 
-        * {
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkly.css' %}">
+    <link rel="stylesheet" href="{% static 'css/datatables.css' %}">
 
-        body {
-            margin: 0;
-            font-family: 'DM Sans', sans-serif;
-            background: var(--crema);
-            color: #333;
-    }
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/jquery_v4.0.0.js' %}"></script>
+    <script src="{% static 'js/datatables.js' %}"></script>
 
-        .site-shell {
-            min-height: 100vh;
-        }
-
-        .site-nav {
-            min-height: 105px;
-            padding: 20px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-            background: white;
-            border-bottom: 1px solid var(--linea);
-        }
-
-        .brand {
-            color: var(--verde);
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .nav-link {
-            color: var(--verde);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .nav-link:hover {
-            color: var(--naranjo);
-        }
-
-        main {
-            width: 90%;
-            max-width: 1350px;
-            margin: 0 auto;
-            padding: 35px 0;
-        }
-
-        footer {
-            padding: 20px;
-            text-align: center;
-            color: #666;
-            border-top: 1px solid var(--linea);
-        }
-
-        @media (max-width: 600px) {
-            .site-nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                gap: 12px;
-            }
-
-            main {
-                width: 92%;
-                padding: 25px 0;
-            }
-        }
-    </style>
+    <link rel="shortcut icon" href="{% static 'images/receta.png' %}" type="image/x-icon">
 </head>
-
 <body>
     <div class="site-shell">
         <header>
@@ -109,6 +30,10 @@
                 <div class="nav-links">
                     <a href="{% url 'home' %}" class="nav-link">
                         Inicio
+                    </a>
+
+                    <a href="{% url 'categoria_list' %}" class="nav-link">
+                        Categorías
                     </a>
 
                     <a href="/api_recetas/" class="nav-link">

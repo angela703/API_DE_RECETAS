@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="dev-secret-key-change-me")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': config("NAME", default="api_recetas"),
         'USER': config("USER", default="api_recetas_user"),
-        'PASSWORD': config("PASSWORD"),
+        'PASSWORD': config("PASSWORD", default=""),
         'HOST': config("HOST", default="localhost"),
         'PORT': config("PORT", default=3306, cast=int),
         'OPTIONS': {

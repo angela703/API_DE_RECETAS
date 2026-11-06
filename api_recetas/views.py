@@ -1,3 +1,4 @@
+from django.views.generic import ListView
 from rest_framework import viewsets
 
 from django.shortcuts import render
@@ -50,3 +51,8 @@ class RecetaIngredienteViewSet(viewsets.ModelViewSet):
 class RecetaViewSet(viewsets.ModelViewSet):
     queryset = Receta.objects.all()
     serializer_class = RecetaSerializer
+
+class CategoriaListView(ListView):
+    model = Categoria
+    template_name = 'api_recetas/categoria_list.html'
+    context_object_name = 'categorias'

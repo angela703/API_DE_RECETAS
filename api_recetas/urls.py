@@ -10,7 +10,8 @@ enrutador.register(r'recetas_ingredientes', views.RecetaIngredienteViewSet)
 enrutador.register(r'historial_recetas', views.HistorialRecetaViewSet)
 
 urlpatterns = [
-    path('admin/', include(enrutador.urls)),
     path('', views.home, name='home'),
-    path('api_recetas/', include(enrutador.urls))
+    path('api_recetas/', include(enrutador.urls)),
+    path('categorias/', views.CategoriaListView.as_view(), name='categoria_list'),
 ]
+
